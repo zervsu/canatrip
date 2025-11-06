@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="./src/output.css" rel="stylesheet">
+    <title>CanaTrip</title>
+</head>
+<body>
+  <header style="background-color: #002420 ; " class=" w-full h-28 md:h-16 flex justify-center items-center fixed z-1">
+  
+    <div class="w-11/12 md:w-1/3 pl-10 flex justify-center items-center h-28 md:h-16" >
+        <img class=" justify-center items-center w-32 h-auto" src="src/img/canatrip.png" alt="">
+
+    </div>
+    <nav class="w-0 md:w-1/3 pl-10 h-16 flex justify-center items-center ">
+        <ul class="flex opacity-0  justify-center items-center list-none md:gap-4 md:opacity-100 lg:gap-16 text-amber-50">
+            <li class="hover:scale-110 cursor-pointer transition-all hover:text-green-600 duration-300"><a href="#inicio">Início</a></li>
+            <li class="hover:scale-110 cursor-pointer transition-all hover:text-green-600 duration-300"><a href="#culinaria">Culinária</a></li>
+            <li class="hover:scale-110 cursor-pointer transition-all hover:text-green-600 duration-300"><a href="#turismo">Turismo</a></li>
+            <li class="hover:scale-110 cursor-pointer transition-all hover:text-green-600 duration-300"><a href="#historia">História</a></li>
+        </ul>
+    </nav>
+
+    <div class="w-0 md:w-1/3 opacity-0 flex justify-end text-white items-center md:opacity-100">
+      <a href="https://github.com/zervsu"><button class="bg-emerald-400 mr-10 w-32 lg:w-52 h-10 rounded-full"><p><ion-icon name="logo-github"></ion-icon> GitHub</p> </button></a>
+    </div>
+  </header> 
+
+    <main id="inicio" style="background-image: url(src/img/fundo-verde.png);" class="w-full bg-cover h-[1000px] relative flex flex-col justify-self-center items-center   2xl:flex-row ">
+      <article class="w-full 2xl:w-1/2 gap-10 text-white bg-cover bg-center h-1/3 2xl:h-full flex flex-col justify-center items-center">
+        <div class="mb-24 w-0 2xl:w-5/6 h-0 2xl:h-1/3 justify-center mt-60 2xl:mt-0 flex items-center float-start">
+            <img class="w-2/3 mt-28" src="src/img/canatrip.png" alt="">
+        </div>
+        <div class=" flex justify-center items-center gap-7 lg:gap-0 flex-col mb-[200px] h-full 2xl:h-2/3 w-full">
+            <p class="lg:text-5xl text-3xl font-black">Saiba mais sobre nosso cantinho</p>                
+            <p class="lg:text-2xl lg:mt-14 lg:ml-4 lg:mr-4 h-full lg:auto w-1/2 lg:w-5/6">Cananéia é um paraíso natural no litoral sul de São Paulo, cercado por ilhas, manguezais e praias intocadas. Um refúgio histórico e ecológico perfeito para quem busca tranquilidade, natureza e aventura no mesmo lugar.</p>
+        </div>
+        </article>
+        <section class="relative w-full 2xl:w-1/2 h-2/3 2xl:h-full flex justify-center items-center 2xl:items-center  2xl:mr-5 overflow-hidden">
+            <div id="carousel" class="flex transition-transform duration-700 ease-in-out gap-32 md:gap-40 lg:gap-80 xl:gap-[400px] 2xl:gap-32 ml-32 md:ml-40 lg:ml-72  xl:ml-[400px] 2xl:ml-32 ">
+                <img src="src/img/portal-cananeia.jpg" class="w-[450px] sm:w-[550px] md:w-[750px] lg:w-[1000px] xl:w-[850px] 2xl:w-[700px] h-[400px] md:h-[500px] lg:h-[500px] xl:h-[500px] 2xl:h-[600px] object-cover rounded-3xl  border-amber-50 border-2 flex" alt="Imagem 1">
+                <img src="src/img/centro.jpg" class="w-[450px] sm:w-[550px] md:w-[750px] lg:w-[1000px] xl:w-[850px] 2xl:w-[700px] h-[400px] md:h-[500px] lg:h-[500px] xl:h-[500px] 2xl:h-[600px] object-cover rounded-3xl  border-amber-50 border-2 flex" alt="Imagem 2">
+                <img src="src/img/rio-das-minas.jpg" class="w-[450px] sm:w-[550px] md:w-[750px] lg:w-[1000px] xl:w-[850px] 2xl:w-[700px] h-[400px] md:h-[500px] lg:h-[500px] xl:h-[500px] 2xl:h-[600px] object-cover rounded-3xl  border-amber-50 border-2 flex" alt="Imagem 3">
+            </div>
+
+            <button id="prev" class="absolute left-4 top-1/2 -translate-y-1/2 bg-emerald-800 bg-opacity-70 text-white px-3 py-2 rounded-full hover:bg-emerald-600 transition">
+                ‹
+            </button>
+            <button id="next" class="absolute right-4 top-1/2 -translate-y-1/2 bg-emerald-800 bg-opacity-70 text-white px-3 py-2 rounded-full hover:bg-emerald-600 transition">
+                ›
+            </button>
+
+            <div id="indicators" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                <span class="w-3 h-3 bg-amber-50 rounded-full opacity-80 cursor-pointer" data-index="0"></span>
+                <span class="w-3 h-3 bg-amber-50 rounded-full opacity-40 cursor-pointer" data-index="1"></span>
+                <span class="w-3 h-3 bg-amber-50 rounded-full opacity-40 cursor-pointer" data-index="2"></span>
+            </div>
+        </section>
+  </main>
+      <section id="culinaria" style="background-image: url(src/img/image\ 10.png);" class="w-full bg-cover h-[1200px] flex flex-col justify-center items-center  bg-white">
+        <p class="text-4xl mb-7 bg-emerald-50 md:bg-white border-2 md:border-0 rounded-[10px] font-black">Culinária</p>
+        <div class="w-4/5 justify-center bg-emerald-50 rounded-[10px] border-2 items-center flex mb-7 2xl:text-[19px]">
+            <p>A gastronomia de Cananéia, no litoral sul de São Paulo, é marcada por uma forte identidade caiçara, com influência indígena, africana <br>e portuguesa. Aqui estão os principais traços que definem essa culinária local — com exemplos práticos para você sentir o sabor e a cultura do lugar.</p>
+        </div>
+
+        <div class=" w-4/5 h-[300px] md:h-[500px] xl:h-[600px] 2xl:h-[700px] gap-2 flex mt-5">
+            <div class= "w-2/3 h-full  rounded-2xl"> <img class="h-[300px] md:h-[500px] xl:h-[600px] 2xl:h-[700px] border-2 rounded-2xl w-full" src="src/img/porcao-de-camaroes-alho.jpg" alt=""></div>
+            <div class=" w-1/3 h-full">
+                <div class=" w-full gap-2 h-1/2"> <img class="h-[141px] md:h-[242px] xl:h-[290px] 2xl:h-[341px] rounded-2xl border-2" src="src/img/cananeia-fazenda-de-ostras-quilombo-Mandira.jpg" alt=""></div>
+                <div class=" w-full h-1/2"> <img class="h-[141px] md:h-[242px] xl:h-[300px] 2xl:h-[350px] rounded-2xl border-2" src="src/img/cananeia-pescador.jpg" alt=""></div>
+            </div>
+        </div>
+
+        <div class="w-4/5 mt-4  2xl:h-[250px] flex justify-center items-center gap-1">
+            <div class="w-1/3 h-full bg-emerald-50 flex justify-center items-center flex-col border-2 rounded-2xl 2xl:text-[19px]">
+                <p class="font-black">🌊 Ingredientes e tradições locais</p>
+                <div class="w-[80%] mt-5"><p>A culinária de Cananéia é caiçara, com influências indígena, africana e portuguesa.
+                    Frutos do mar como ostras, mariscos, camarões e peixes frescos são base dos pratos.
+                    Também são usados banana, mandioca e temperos da mata, valorizando produtos locais.</p>
+                </div>
+            </div>
+            <div class="w-1/3 h-full bg-emerald-50 flex justify-start 2xl:justify-center items-center flex-col border-2 rounded-2xl 2xl:text-[19px]">
+                <p class="font-black">🍽 Pratos típicos</p>
+                <div class="w-[80%] mt-5"><p>Os destaques são o Lambe-lambe (arroz com mariscos e farofa de ostra),
+                    ostras frescas ou gratinadas, e peixes defumados ou grelhados.
+                    As receitas mantêm o preparo simples, respeitando o sabor natural dos ingredientes.</p>
+                </div>
+            </div>
+            <div class="w-1/3 h-full bg-emerald-50 flex justify-start 2xl:justify-center items-center flex-col border-2 rounded-2xl 2xl:text-[19px]">
+                <p class="font-black">🎉 Cultura e turismo</p>
+                <div class="w-[80%] mt-5"><p>A gastronomia está ligada à vida caiçara e quilombola.
+                    O Festival Sabores de Cananéia celebra esses pratos e incentiva o uso de ingredientes regionais.
+                    Comer na cidade é também uma forma de conhecer sua história e tradições.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section id="turismo" style="background-image: url(src/img/fundo-verde.png);" class=" bg-cover w-full flex-col justify-center text-white items-center flex h-[1000px]">
+                <p class="text-4xl mb-7 font-black">Turismo</p>
+        <div class="w-4/5 mb-7">
+            <p class="">A cidade de Cananéia, no litoral sul de São Paulo, é um destino de turismo muito especial por combinar natureza preservada, história e cultura caiçara. Aqui estão os pontos principais que você precisa saber — de maneira resumida e direta.</p>
+        </div>
+        <div class=" w-1/3 flex items-center mb-10 justify-center gap-4 h-16">
+            <button id="btnCultural" class="bg-emerald-400 w-[200px] hover:scale-110 transition-all cursor-pointer duration-300 rounded-3xl h-12"> <p>Cultural</p></button>
+            <button id="btnHistorico" class="bg-emerald-400 w-[200px] hover:scale-110 transition-all cursor-pointer duration-300 rounded-3xl h-12"> <p>Histórico</p></button>
+            <button id="btnNatural" class="bg-emerald-400 w-[200px] hover:scale-110 transition-all cursor-pointer duration-300 rounded-3xl h-12"> <p>Natural</p></button>
+        </div>
+        <div id="conteudo" class="w-4/5 flex h-[600px]"> 
+            <div id="infobox" class="flex justify-center items-center flex-col gap-4 w-1/2 h-full">
+                <h2 id="titulo" class="text-3xl font-bold mb-4 lg:mr-5"></h2>
+                <div id="infos" class="flex justify-center lg:mr-5 items-center">
+                    <p></p>
+                </div>
+            </div>
+            <div class=" w-1/2 flex justify-center items-center h-full">
+                <img id="imagem" class="rounded-2xl border-2 border-white" src="" alt="">   
+            </div>
+        </div>
+    </section>
+    <div style="background-image: url(src/img/image\ 10.png);" id="historia" class=" bg-cover w-full h-[1200px] 2xl:h-[900px] justify-center items-center flex flex-col">
+        <div class=" 2xl:mt-7 w-full  h-36 2xl:h-24 gap-4 flex-col flex justify-center items-center">
+            <p class="text-3xl bg-emerald-50 2xl:bg-white border-2 2xl:border-0 rounded-[10px] "><strong> História </strong></p>
+            <p class="bg-emerald-50 border-2 rounded-[10px]">Cananéia, fundada em 1502, é uma das cidades mais antigas do Brasil. Situada no litoral sul de São Paulo, destaca-se por sua rica história colonial e belezas naturais preservadas.</p>
+        </div>  
+
+        <div class="  w-full flex justify-center flex-col gap-2 2xl:flex-row items-center h-[1200px] 2xl:h-[1000px] ">
+
+            <div class="  w-full 2xl:w-1/2 mt-16 lg:mt-0 flex justify-center items-center flex-col h-[600px] 2xl:h-full">
+                <div class="border-2 2xl:ml-24 bg-emerald-200 rounded-2xl flex justify-center gap-4 items-center flex-col w-4/5 xl:w-[900px] h-[800px] ml-4 xl:h-[600px]">
+                    <p class="text-3xl"><strong>História de Cananéia</strong></p>
+                    <p>Cananéia é considerada uma das cidades mais antigas do Brasil, com fundação datada de 12 de agosto de 1531, durante a expedição de Martim Afonso de Sousa. Localizada no extremo sul do litoral paulista, a cidade foi um dos primeiros núcleos de colonização portuguesa no país.<br><br>Sua história está ligada ao período das grandes navegações e à busca por riquezas e rotas comerciais. O Marco do Tratado de Tordesilhas, que simboliza a divisão das terras entre Portugal e Espanha, encontra-se em Cananéia — um testemunho do início da colonização europeia na América do Sul.<br><br>Durante os séculos XVI e XVII, Cananéia prosperou com o comércio marítimo, sendo um importante porto natural. No entanto, sua posição isolada também a protegeu, permitindo que preservasse casarões coloniais, ruas de pedra e tradições caiçaras até os dias de hoje.<br><br>Atualmente, Cananéia é reconhecida como Patrimônio Natural da Humanidade pela UNESCO(por sua relação com a Mata Atlântica e o complexo estuarino-lagunar), e sua história se mistura à natureza exuberante, à cultura local e à vida tranquila de quem vive entre o mar e a serra.
+                    </p>
+                </div>
+            </div>
+
+            <div class=" w-full 2xl:w-1/2 justify-center gap-5 mb-0 2xl:mb-0 items-center flex h-[350px] lg:h-[420px] 2xl:h-full">
+                <div class=" w-full 2xl:w-[900px] flex  justify-center gap-2 items-center flex-col lg:flex-row 2xl:flex-col h-[350px] lg:h-[420px] 2xl:h-[700px]">
+                    <div class=" h-1/2 flex justify-center items-center gap-4 w-full">
+                        <img class="h-[170px] lg:h-full 2xl:h-[300px] w-[200px] sm:w-[200px] md:w-[250px] lg:w-[300px] xl:w-[350px] 2xl:w-[300px] mt-2 rounded-2xl border-2" src="src/img/antiga-1.jpg" alt="">
+                        <img class="h-[170px] lg:h-full 2xl:h-[300px] w-[200px] sm:w-[200px] md:w-[250px] lg:w-[300px] xl:w-[350px] 2xl:w-[300px] mt-2 rounded-2xl border-2" src="src/img/antiga-2.jpg" alt="">
+                    </div>
+                    <div class= " h-1/2 flex justify-center items-start gap-4 w-full">
+                        <img class="h-[170px] lg:h-full 2xl:h-[300px] w-[200px] sm:w-[200px] md:w-[250px] lg:w-[300px] xl:w-[350px] 2xl:w-[300px] mb-2 rounded-2xl border-2" src="src/img/antiga-3.jpg" alt="">
+                        <img class="h-[170px] lg:h-full 2xl:h-[300px] w-[200px] sm:w-[200px] md:w-[250px] lg:w-[300px] xl:w-[350px] 2xl:w-[300px] mb-2 rounded-2xl border-2" src="src/img/antiga-4.jpg" alt="">    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-emerald-950 flex flex-col  text-white h-[400px] w-full py-10 px-6">
+  <div class="w-full mt-7 flex flex-wrap gap-10 justify- items-start">
+    
+    <div class="flex-1 w-[200px]">
+      <h4 class="mb-3  "><strong> Navegação</strong></h4>
+      <ul class="space-y-1 text-sm">
+        <li><a href="/about" class="hover:underline">Sobre nós</a></li>
+        <li><a href="/services" class="hover:underline">Serviços</a></li>
+        <li><a href="/blog" class="hover:underline">Blog</a></li>
+        <li><a href="/faq" class="hover:underline">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="flex-1 w-[200px]">
+      <h4 class="mb-3 text-lg font-semibold"><strong>Contato</strong></h4>
+      <p class="text-sm leading-relaxed">
+        São Paulo, SP<br>
+        <a href="tel:+5513996111346" class="hover:underline">+55 (13) 99611-1346</a><br>
+        <a href="mailto:zeversu@gmail.com" class="hover:underline">zeversu@gmail.com</a>
+      </p>
+    </div>
+
+    <div class="flex-1 w-[200px]">
+      <h4 class="mb-3 text-lg font-semibold"><strong>Conecte-se</strong></h4>
+      <div class="flex flex-col gap-1 text-sm">
+        <a href="https://www.instagram.com/_.wews._/" target="_blank" rel="noopener noreferrer" class="hover:underline">Instagram</a>
+        <a href="https://www.linkedin.com/in/weverson-rodrigues-b518a6282" target="_blank" rel="noopener noreferrer" class="hover:underline">LinkedIn</a>
+        <a href="https://github.com/zervsu" target="_blank" rel="noopener noreferrer" class="hover:underline">GitHub</a>
+    </div>
+    </div>
+
+    <div class="flex-1 w-[200px]">
+      <h4 class="mb-3 text-lg font-semibold"><strong>Legal</strong></h4>
+      <ul class="space-y-1 text-sm">
+        <li><a href="/privacy" class="hover:underline">Política de Privacidade</a></li>
+        <li><a href="/terms" class="hover:underline">Termos de Uso</a></li>
+        <li><a href="/cookies" class="hover:underline">Política de Cookies</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="border-gray-700 mt-10 my-8">
+
+  <div class="max-w-6xl  mx-auto mt-10 flex flex-wrap justify-center items-center text-sm">
+    <p class="text-gray-400">© 2025 CanaTrip Inc. Todos os direitos reservados.</p>
+    <a href="#top" class="text-gray-400 hover:underline">Voltar ao topo ↑</a>
+  </div>
+</footer>
+  <script src="script.js"></script>
+</body>
+</html>
